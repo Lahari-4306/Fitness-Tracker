@@ -1,15 +1,17 @@
+// server/config/connection.js
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 
-mongoose.set("strictQuery", false);
+dotenv.config();
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitness-tracker", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}, err => {
-  if (err) throw err;
-  console.log('Connected to MongoDB!')
-}
+const mongoURI = process.env.MONGODB_URI;
 
-);
+mongoose
+  .connect(mongoURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("✅ MongoDB connected successfully"))
+  .catch((err) => console.error("❌ MongoDB connection error:", err.message));
 
 module.exports = mongoose.connection;
