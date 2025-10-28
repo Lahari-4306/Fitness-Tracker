@@ -1,14 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
+const router = require("express").Router();
+const path = require("path");
+const apiRoutes = require("./api");
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+router.use("/api", apiRoutes);
 
-reportWebVitals();
+// connect with react router
+// serve up react front-end in production
+router.use((req, res) => {
+  res.sendFile(path.join(__dirname, "../../build/index.html"));
+});
+
+module.exports = router;
