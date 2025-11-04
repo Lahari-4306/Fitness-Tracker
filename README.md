@@ -41,31 +41,6 @@ npm run develop
 
 [Click me to see the app!](https://fittrack-mlvj.onrender.com)
 
-#### Example Screenshot
-
-- Home Page <br>
-  ![Screenshot](./client/src/assets/screenshots/1.png)
-
-- Login Page <br>
-  ![Screenshot](./client/src/assets/screenshots/2.png)
-
-- Exercise Page <br>
-  ![Screenshot](./client/src/assets/screenshots/3.png)
-
-- Add Cardio <br>
-  ![Screenshot](./client/src/assets/screenshots/4.png)
-
-- Add Resistance <br>
-  ![Screenshot](./client/src/assets/screenshots/5.png)
-
-- History Page <br>
-  ![Screenshot](./client/src/assets/screenshots/6.png)
-
-- Single Cardio History <br>
-  ![Screenshot](./client/src/assets/screenshots/7.png)
-
-- Single Resistance History <br>
-  ![Screenshot](./client/src/assets/screenshots/8.png)
 
 ## Contribution
 
